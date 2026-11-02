@@ -14,14 +14,14 @@ jobs:
     strategy:
       matrix:
         ruby:
-          - '3.4.7'
+          - '4.0.9'
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.4.0
         with:
           persist-credentials: false
       - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@v1.336.0
         with:
           ruby-version: ${{ matrix.ruby }}
           bundler-cache: true
